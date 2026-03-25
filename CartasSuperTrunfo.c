@@ -23,6 +23,8 @@ int main() {
 	codCarta_1[0] = estado_1;
 	codCarta_1[1] = num_carta_1 + '0';
 	codCarta_1[2] = '\0';
+
+  while(getchar() != '\n'); // Limpar o buffer do teclado para evitar problemas com o fgets
 	
 	printf("Digite o nome da cidade:\n"); //Usando o fgets para capturar o nome
 	fgets(nomeCidade_1, sizeof(nomeCidade_1), stdin);
@@ -42,12 +44,14 @@ int main() {
 	printf("Insira os dados da carta 2\n");	//Pedir dados da carta 2
 	
 	printf("Digite a letra do estado (de A à H)\n"); //Pedir e armazenar Letra do estado
-	scanf("%c", &estado_2);
+	scanf(" %c", &estado_2);
 	
+  while(getchar() != '\n'); // Limpar o buffer do teclado para evitar problemas com o fgets
+
 	//Array de char que gera o cod do estado
-	codCarta_1[0] = estado_2;
-	codCarta_1[1] = num_carta_2 + '0';
-	codCarta_1[2] = '\0';
+	codCarta_2[0] = estado_2;
+	codCarta_2[1] = num_carta_2 + '0';
+	codCarta_2[2] = '\0';
 	
 	printf("Digite o nome da cidade:\n"); //Usando o fgets para capturar o nome
 	fgets(nomeCidade_2, sizeof(nomeCidade_2), stdin);
@@ -71,18 +75,18 @@ int main() {
 	printf("Estado: %c\n", estado_1);
 	printf("Código: %s\n", codCarta_1);
 	printf("Nome da Cidade: %s\n", nomeCidade_1);
-	printf("Área: %f\n", area_1);
-	printf("PIB: %f\n", pib_1);
-	printf("Número de pontos turísticos: %d", pontosTuristicos_1);
+	printf("Área: %.2f km²\n", area_1);
+	printf("PIB: %.2f bilhões de reais\n", pib_1);
+	printf("Número de pontos turísticos: %d\n", pontosTuristicos_1);
 	
 	// CARTA 2
 	printf("CARTA: %d\n",num_carta_2);
 	printf("Estado: %c\n", estado_2);
 	printf("Código: %s\n", codCarta_2);
-	printf("Nome da Cidade: %s", nomeCidade_2);
-	printf("Área: %f\n", area_2);
-	printf("PIB: %f\n", pib_2);
+	printf("Nome da Cidade: %s\n", nomeCidade_2);
+	printf("Área: %.2f km²\n", area_2);
+	printf("PIB: %.2f bilhões de reais\n", pib_2);
 	printf("Número de pontos turísticos: %d\n", pontosTuristicos_2);
 
-return 0;
+  return 0;
 } 
