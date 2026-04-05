@@ -82,7 +82,7 @@ int main() {
 	long double super_poder_2 = (long double)populacao_2 + area_2 + pib_2 + pontosTuristicos_2 + pib_per_capta_2 + (1/densidade_popolacional_2);
 	
   // Área para exibição dos dados da cidade
-  	printf("================== Super Trunfo Cidades ==================");
+	printf("================== Super Trunfo Cidades ==================");
   // CARTA 1
 	printf("CARTA: %d\n",num_carta_1);
 	printf("Estado: %c\n", estado_1);
@@ -116,5 +116,5 @@ int main() {
 	printf("PIB per Capita:  Carta %d venceu.\n", (pib_per_capta_1 > pib_per_capta_2) ? num_carta_1 : num_carta_2);
 	printf("Super Poder:  Carta %d venceu.\n", (super_poder_1 > super_poder_2) ? num_carta_1 : num_carta_2);
 
-  return 0;
+    return 0;
 } 
